@@ -26,7 +26,7 @@ To get started with the project, you need to install the necessary dependencies.
 ```bash
 # Clone this repository
 git clone <repo-url>
-
+```
 ```bash
 # Navigate into the project directory
 cd <project-directory>
