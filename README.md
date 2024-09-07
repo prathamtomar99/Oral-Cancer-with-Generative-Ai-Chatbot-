@@ -58,16 +58,31 @@ Upload Image:
 Navigate to the home page and upload an image through the form.
 View Processed Results:
 
+File Structure
+```bash
+├── app.py                # Main Flask application
+├── templates/            # HTML templates for rendering
+│   └── index.html        # Main page template
+├── static/               # Static files (CSS, JavaScript, images)
+├── uploads/              # Folder for uploaded images
+├── models/               # TensorFlow and PyTorch models
+├── README.md             # Project documentation
+└── requirements.txt      # Python dependencies
+```
+
+
+
 After processing (e.g., image classification, object detection, etc.), the result will be displayed on the output page.
 File Structure in inside plain.txt
-Requirements
-Python 3.x
-Flask
-TensorFlow
-PyTorch
-OpenCV
-Pillow
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+# Requirements
+- Python 3.x
+- Flask
+- TensorFlow
+- PyTorch
+- OpenCV
+- Pillow
+- License
+  
+# This project is licensed under the MIT License - see the LICENSE file for details.
 
 This provides a clear and comprehensive overview of your project, helping users understand its functionality and how to get started.
