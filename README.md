@@ -23,24 +23,29 @@ Flask’s render_template method is used to render dynamic HTML pages, enabling 
 Installation
 To get started with the project, you need to install the necessary dependencies.
 
-bash
-Copy code
+```bash
 # Clone this repository
-```git clone <repo-url>```
+git clone <repo-url>
 
+```bash
 # Navigate into the project directory
-```cd <project-directory>```
+cd <project-directory>
 
+```bash
 # Install the required libraries
-```pip install -r requirements.txt```
+pip install -r requirements.txt
+
 If a requirements.txt file is not available, you can install them individually:
 
-```pip install Flask Werkzeug tensorflow Pillow torch torchvision opencv-python```
+```bash
+pip install Flask Werkzeug tensorflow Pillow torch torchvision opencv-python
 Usage
 Run the Application:
 
-Start the Flask app by running:
-```python app.py```
+```bash
+#Start the Flask app by running:
+python app.py
+
 The server will run on http://127.0.0.1:5000/ by default.
 Upload Image:
 
