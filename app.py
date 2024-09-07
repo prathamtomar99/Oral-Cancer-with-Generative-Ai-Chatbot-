@@ -13,7 +13,7 @@ app.config['UPLOAD_FOLDER'] = upl_fol
 os.makedirs(upl_fol, exist_ok=True)
 
 model = tf.keras.models.load_model('./models/efficient_net_B2.keras')
-# model = tf.keras.models.load_model('models/best_model_resnet.keras')
+# model = tf.keras.models.load_model('./models/best_model_resnet.keras')
 def prediction_to_name(data):
     if(data>0.4):  #threshold =0.4
         return 1
@@ -52,4 +52,3 @@ def display_image(filename):
 
 if __name__ == "__main__":
     app.run(debug=True)
-# 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
