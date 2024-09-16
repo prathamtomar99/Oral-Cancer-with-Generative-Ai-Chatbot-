@@ -1,10 +1,12 @@
-Oral Cancer basic Deep Learning
-Flask Application with TensorFlow, PyTorch, and OpenCV Integration
+Oral Cancer advance Deep Learning with Ensemble Techniques
+Flask Application with TensorFlow, PyTorch, OpenCV, LLM model Integration
 
 Features
 File Upload:
 
 Users can upload images through a form, securely saved using Flask and Werkzeug's secure_filename.
+users can also chat with a Chat LLM Model which is integrates using HuggingFaceHub API
+
 TensorFlow Model Loading:
 
 TensorFlow is used for loading pre-trained models to perform image classification or other machine learning tasks.
