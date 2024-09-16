@@ -9,6 +9,13 @@ import cv2
 app = Flask(__name__)
 import pickle
 import numpy as np
+from flask import Flask, render_template, request, jsonify
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(
+    model="mistralai/Mistral-Nemo-Instruct-2407",
+    token="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"
+)
 
 upl_fol = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = upl_fol
@@ -63,6 +70,34 @@ def upload_image():
 @app.route('/display/<filename>')
 def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_input = request.json.get('message')
+    try:
+        # Make a text request to the Hugging Face model
+        # response = client.text(user_input)
+        response=""
+        for message in client.chat_completion(
+            messages=[{"role": "user", "content": f"{user_input}"}],
+            max_tokens=100,
+            stream=True,
+        ):
+            print(message.choices[0].delta.content, end="")
+            response= response+message.choices[0].delta.content
+        print(response)
+        response=response.replace('\n', '<br>')
+        response=response.split("**")
+        final_text=""
+        for i, part in enumerate(response):
+            final_text +=  f"<span style='font-size: 20.5px;'>{part}</span>" if((i%2 != 0)  & (i>0)) else  part
+        # print(final_text)
+        return jsonify({'response': final_text})
+    except Exception as e:
+        print(e)
+        # Handle possible errors
+        return jsonify({'error': str(e)})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
