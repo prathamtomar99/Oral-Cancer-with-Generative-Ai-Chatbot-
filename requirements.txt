@@ -1,6 +1,10 @@
-Python 3.x
 Flask
-TensorFlow
-PyTorch
-OpenCV
+Werkzeug
+tensorflow
+torch
+torchvision
 Pillow
+opencv-python
+numpy
+pickle5
+huggingface_hub
