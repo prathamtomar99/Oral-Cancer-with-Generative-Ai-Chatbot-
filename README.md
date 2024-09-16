@@ -1,5 +1,6 @@
-Oral Cancer advance Deep Learning with Ensemble Techniques
-Flask Application with TensorFlow, PyTorch, OpenCV, LLM model Integration
+## Oral Cancer advance Deep Learning with Ensemble Techniques
+
+#Flask Application with TensorFlow, PyTorch, OpenCV, LLM model Integration
 
 Features
 File Upload:
